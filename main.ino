@@ -4,7 +4,7 @@
 SoftwareSerial mySoftwareSerial(10, 11);  // RX, TX
 DFRobotDFPlayerMini myDFPlayer;
 
-const int TOTAL_FILES = 1;
+const int TOTAL_FILES = 9;
 const int BUSY_PIN = 5;
 
 int randomWaitTime(int secStart, int secEnd) {
