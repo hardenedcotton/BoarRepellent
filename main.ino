@@ -5,7 +5,7 @@ SoftwareSerial mySoftwareSerial(10, 11);  // RX, TX
 DFRobotDFPlayerMini myDFPlayer;
 
 const int TOTAL_FILES = 9;
-const int BUSY_PIN = 5;
+#define BUSY_PIN 5
 
 int randomWaitTime(int secStart, int secEnd) {
   return random(secStart, secEnd);
@@ -27,10 +27,11 @@ void setup() {
 
   Serial.println("DFPlayer Mini online.");
   myDFPlayer.setTimeOut(500);
-  myDFPlayer.volume(30);  // (0 to 30)
+  myDFPlayer.volume(26);  // (0 to 30)
   myDFPlayer.EQ(DFPLAYER_EQ_NORMAL);
   myDFPlayer.outputDevice(DFPLAYER_DEVICE_SD);
-  randomSeed(analogRead(0));
+
+  randomSeed(analogRead(A0));
 }
 
 void loop() {
@@ -42,16 +43,16 @@ void loop() {
     Serial.print("Playing track: ");
     Serial.println(trackNumber);
 
-
+    // Wait for the track to finish playing
     while (digitalRead(BUSY_PIN) == LOW) {
       // Do nothing, wait for the track to finish playing
     }
 
     // Once the track has finished, wait for a random interval
+    int waitTime = randomWaitTime(20, 40);
+    Serial.print("Waiting for ");
+    Serial.print(waitTime);
+    Serial.println(" seconds before playing the next track.");
+    delay(waitTime * 1000);
   }
-  int waitTime = randomWaitTime(20, 60);
-  Serial.print("Waiting for ");
-  Serial.print(waitTime);
-  Serial.println(" seconds before playing the next track.");
-  delay(waitTime * 1000);
 }
