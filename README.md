@@ -2,9 +2,12 @@
 This project aims to use different sound effects to scare the invasive boars that roam in the dark hours in farming areas.
 
 The system can be seen here (We used caulk to isolate terminals, secure boards and seal the cable hole for waterproofing):
+
 ![System](https://github.com/user-attachments/assets/047c9caa-d92c-49cc-b4a9-e2cdaea49fd2)
 
+</br>
 The system while working (Speaker is muffled on the couch due to loudness):
+
 https://github.com/user-attachments/assets/0228eaed-50c0-4ad3-9799-def11d571db1
 
 ## Design
