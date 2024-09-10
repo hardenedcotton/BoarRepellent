@@ -35,3 +35,14 @@ In the night time, there are two phases:
   - The randow track signal is recieved by the DF Player Mini
   - The random track is then selected from the preloaded sound effects in the microSD Card
 - This phase lasts until the solar panel gets enough sunlight or until the set time on the relay pulls the contacts again.
+
+## Components:
+- Orbus 12V 12mAh Lead-Acid Battery
+- Gesper Energy 15W Watt Monocrystal Solar Panel 12V 36 Cells
+- Lexron 12V/24V 10A PWM Charge Control Unit
+- Arduino Nano Clone (CH340)
+- DF Player Mini HW-247A
+- TDA8932 Mono Digital Amplifier
+- HCW-M421 Timer Module
+- Magicvoice MV-30600 12V 15W Speaker
+- 5mm Flasher RGB LED
